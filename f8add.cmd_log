@@ -1,0 +1,2 @@
+sch2verilog -intstyle ise -family aspartan2e   -w "C:/Documents and Settings/student/isetest/lab2/f8add.sch" f8add.vf
+sch2verilog -intstyle ise -family aspartan2e   -w "C:/Documents and Settings/student/isetest/lab2/f8add.sch" f8add.vf
