@@ -8,23 +8,19 @@ BEGIN SCHEMATIC
     BEGIN NETLIST
         SIGNAL A
         SIGNAL B
-        SIGNAL XLXN_3
         SIGNAL C
-        SIGNAL XLXN_6
-        SIGNAL XLXN_7
-        SIGNAL XLXN_8
-        SIGNAL XLXN_9
         SIGNAL XLXN_11
-        SIGNAL XLXN_12
         SIGNAL XLXN_13
-        SIGNAL XLXN_14
         SIGNAL S
-        SIGNAL CO
+        SIGNAL XLXN_16
+        SIGNAL XLXN_17
+        SIGNAL XLXN_18
+        SIGNAL Co
         PORT Input A
         PORT Input B
         PORT Input C
         PORT Output S
-        PORT Output CO
+        PORT Output Co
         BEGIN BLOCKDEF xor2
             TIMESTAMP 2000 1 1 10 10 10
             LINE N 0 -64 64 -64 
@@ -47,20 +43,19 @@ BEGIN SCHEMATIC
             LINE N 64 -144 144 -144 
             LINE N 64 -48 64 -144 
         END BLOCKDEF
-        BEGIN BLOCKDEF xor3
+        BEGIN BLOCKDEF or3
             TIMESTAMP 2000 1 1 10 10 10
             LINE N 0 -64 48 -64 
             LINE N 0 -128 72 -128 
             LINE N 0 -192 48 -192 
-            LINE N 256 -128 208 -128 
+            LINE N 256 -128 192 -128 
+            ARC N 28 -256 204 -80 112 -80 192 -128 
             ARC N -40 -184 72 -72 48 -80 48 -176 
-            ARC N -24 -184 88 -72 64 -80 64 -176 
-            ARC N 44 -176 220 0 208 -128 128 -176 
             LINE N 48 -64 48 -80 
             LINE N 48 -192 48 -176 
-            LINE N 128 -80 64 -80 
-            LINE N 128 -176 64 -176 
-            ARC N 44 -256 220 -80 128 -80 208 -128 
+            LINE N 112 -80 48 -80 
+            ARC N 28 -176 204 0 192 -128 112 -176 
+            LINE N 112 -176 48 -176 
         END BLOCKDEF
         BEGIN BLOCK XLXI_1 xor2
             PIN I0 B
@@ -75,7 +70,7 @@ BEGIN SCHEMATIC
         BEGIN BLOCK XLXI_3 and2
             PIN I0 B
             PIN I1 A
-            PIN O XLXN_12
+            PIN O XLXN_18
         END BLOCK
         BEGIN BLOCK XLXI_4 and2
             PIN I0 C
@@ -85,13 +80,13 @@ BEGIN SCHEMATIC
         BEGIN BLOCK XLXI_5 and2
             PIN I0 C
             PIN I1 B
-            PIN O XLXN_14
+            PIN O XLXN_16
         END BLOCK
-        BEGIN BLOCK XLXI_6 xor3
-            PIN I0 XLXN_14
+        BEGIN BLOCK XLXI_9 or3
+            PIN I0 XLXN_16
             PIN I1 XLXN_13
-            PIN I2 XLXN_12
-            PIN O CO
+            PIN I2 XLXN_18
+            PIN O Co
         END BLOCK
     END NETLIST
     BEGIN SHEET 1 3520 2720
@@ -100,7 +95,6 @@ BEGIN SCHEMATIC
         INSTANCE XLXI_3 992 1184 R0
         INSTANCE XLXI_4 992 1472 R0
         INSTANCE XLXI_5 992 1760 R0
-        INSTANCE XLXI_6 1856 1504 R0
         BEGIN BRANCH A
             WIRE 384 640 432 640
             WIRE 432 640 1008 640
@@ -118,8 +112,7 @@ BEGIN SCHEMATIC
             WIRE 496 1120 992 1120
         END BRANCH
         BEGIN BRANCH C
-            WIRE 368 784 384 784
-            WIRE 384 784 560 784
+            WIRE 368 784 560 784
             WIRE 560 784 1856 784
             WIRE 560 784 560 1408
             WIRE 560 1408 560 1696
@@ -134,24 +127,28 @@ BEGIN SCHEMATIC
             WIRE 1552 672 1552 720
             WIRE 1552 720 1856 720
         END BRANCH
-        BEGIN BRANCH XLXN_12
-            WIRE 1248 1088 1856 1088
-            WIRE 1856 1088 1856 1312
-        END BRANCH
         BEGIN BRANCH XLXN_13
-            WIRE 1248 1376 1856 1376
-        END BRANCH
-        BEGIN BRANCH XLXN_14
-            WIRE 1248 1664 1856 1664
-            WIRE 1856 1440 1856 1664
+            WIRE 1248 1376 2000 1376
+            WIRE 2000 1376 2112 1376
         END BRANCH
         BEGIN BRANCH S
             WIRE 2112 752 2352 752
         END BRANCH
-        BEGIN BRANCH CO
-            WIRE 2112 1376 2368 1376
-        END BRANCH
         IOMARKER 2352 752 S R0 28
-        IOMARKER 2368 1376 CO R0 28
+        BEGIN BRANCH XLXN_16
+            WIRE 1248 1664 1616 1664
+            WIRE 1616 1440 1616 1664
+            WIRE 1616 1440 2000 1440
+            WIRE 2000 1440 2112 1440
+        END BRANCH
+        INSTANCE XLXI_9 2112 1504 R0
+        BEGIN BRANCH XLXN_18
+            WIRE 1248 1088 2112 1088
+            WIRE 2112 1088 2112 1312
+        END BRANCH
+        BEGIN BRANCH Co
+            WIRE 2368 1376 2448 1376
+        END BRANCH
+        IOMARKER 2448 1376 Co R0 28
     END SHEET
 END SCHEMATIC
