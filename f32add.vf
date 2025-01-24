@@ -1,0 +1,143 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : f32add.vf
+// /___/   /\     Timestamp : 01/24/2025 02:05:08
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family aspartan2e -w "C:/Documents and Settings/student/isetest/lab2/f32add.sch" f32add.vf
+//Design Name: f32add
+//Device: aspartan2e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module f32add(A, 
+              B, 
+              C_in, 
+              Cout, 
+              S);
+
+    input [7:0] A;
+    input [7:0] B;
+    input C_in;
+   output Cout;
+   output [7:0] S;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   
+   f8add XLXI_1 (.A0(), 
+                 .A1(), 
+                 .A2(), 
+                 .A3(), 
+                 .A4(), 
+                 .A5(), 
+                 .A6(), 
+                 .A7(), 
+                 .B0(), 
+                 .B1(), 
+                 .B2(), 
+                 .B3(), 
+                 .B4(), 
+                 .B5(), 
+                 .B6(), 
+                 .B7(), 
+                 .Cin(C_in), 
+                 .C_out(XLXN_1), 
+                 .S0(), 
+                 .S1(), 
+                 .S2(), 
+                 .S3(), 
+                 .S4(), 
+                 .S5(), 
+                 .S6(), 
+                 .S7());
+   f8add XLXI_2 (.A0(), 
+                 .A1(), 
+                 .A2(), 
+                 .A3(), 
+                 .A4(), 
+                 .A5(), 
+                 .A6(), 
+                 .A7(), 
+                 .B0(), 
+                 .B1(), 
+                 .B2(), 
+                 .B3(), 
+                 .B4(), 
+                 .B5(), 
+                 .B6(), 
+                 .B7(), 
+                 .Cin(XLXN_1), 
+                 .C_out(XLXN_2), 
+                 .S0(), 
+                 .S1(), 
+                 .S2(), 
+                 .S3(), 
+                 .S4(), 
+                 .S5(), 
+                 .S6(), 
+                 .S7());
+   f8add XLXI_3 (.A0(), 
+                 .A1(), 
+                 .A2(), 
+                 .A3(), 
+                 .A4(), 
+                 .A5(), 
+                 .A6(), 
+                 .A7(), 
+                 .B0(), 
+                 .B1(), 
+                 .B2(), 
+                 .B3(), 
+                 .B4(), 
+                 .B5(), 
+                 .B6(), 
+                 .B7(), 
+                 .Cin(XLXN_3), 
+                 .C_out(Cout), 
+                 .S0(), 
+                 .S1(), 
+                 .S2(), 
+                 .S3(), 
+                 .S4(), 
+                 .S5(), 
+                 .S6(), 
+                 .S7());
+   f8add XLXI_4 (.A0(), 
+                 .A1(), 
+                 .A2(), 
+                 .A3(), 
+                 .A4(), 
+                 .A5(), 
+                 .A6(), 
+                 .A7(), 
+                 .B0(), 
+                 .B1(), 
+                 .B2(), 
+                 .B3(), 
+                 .B4(), 
+                 .B5(), 
+                 .B6(), 
+                 .B7(), 
+                 .Cin(XLXN_2), 
+                 .C_out(XLXN_3), 
+                 .S0(), 
+                 .S1(), 
+                 .S2(), 
+                 .S3(), 
+                 .S4(), 
+                 .S5(), 
+                 .S6(), 
+                 .S7());
+endmodule

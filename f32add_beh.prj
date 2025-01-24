@@ -1,0 +1,4 @@
+verilog work "f1add.vf"
+verilog work "f8add.vf"
+verilog work "f32add.vf"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"
