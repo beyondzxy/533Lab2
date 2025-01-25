@@ -1,0 +1,3 @@
+sch2verilog -intstyle ise -family aspartan2e   -w "C:/Documents and Settings/student/isetest/lab2/sub/sub32.sch" sub32.vf
+sch2verilog -intstyle ise -family aspartan2e   -w "C:/Documents and Settings/student/isetest/lab2/sub/sub32.sch" sub32.vf
+sch2verilog -intstyle ise -family aspartan2e   -w "C:/Documents and Settings/student/isetest/lab2/sub/sub32.sch" sub32.vf

@@ -1,0 +1,45 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : sub32.vf
+// /___/   /\     Timestamp : 01/24/2025 20:30:10
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family aspartan2e -w "C:/Documents and Settings/student/isetest/lab2/sub/sub32.sch" sub32.vf
+//Design Name: sub32
+//Device: aspartan2e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module sub32(A, 
+             B, 
+             Kctr, 
+             C_out, 
+             S);
+
+    input [31:0] A;
+    input [31:0] B;
+    input Kctr;
+   output C_out;
+   output [31:0] S;
+   
+   wire [31:0] XLXN_1;
+   
+   adder32 XLXI_1 (.A(), 
+                   .B(XLXN_1[31:0]), 
+                   .Cin(Kctr), 
+                   .Cout(C_out), 
+                   .S());
+   xor32 XLXI_2 (.B(), 
+                 .K(Kctr), 
+                 .Y(XLXN_1[31:0]));
+endmodule

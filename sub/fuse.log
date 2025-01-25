@@ -1,0 +1,19 @@
+Determining compilation order of HDL files
+Analyzing Verilog file adder32_tb.v
+Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Saving Verilog parse-tree work.adder32_tb into c:/documents and
+settings/student/isetest/lab2/sub/isim/work/adder32_tb.sdb
+Saving Verilog parse-tree work.glbl into c:/documents and
+settings/student/isetest/lab2/sub/isim/work/glbl.sdb
+Starting static elaboration
+WARNING:HDLCompiler:559 - "adder32_tb.v" Line 37. Instantiating unknown module
+   Adder32
+Completed static elaboration
+Fuse Memory Usage: 54152 Kb
+Fuse CPU Usage: 93 ms
+Compiling module glbl
+Compiling module adder32_tb
+Compiled 2 Verilog Units
+Built simulation executable adder32_tb_isim_beh.exe
+Fuse Memory Usage: 55436 Kb
+Fuse CPU Usage: 124 ms

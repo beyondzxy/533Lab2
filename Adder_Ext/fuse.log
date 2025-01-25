@@ -1,0 +1,33 @@
+Determining compilation order of HDL files
+Analyzing Verilog file FullAdder.v
+Analyzing Verilog file Shifter32.v
+Analyzing Verilog file Adder32.v
+Analyzing Verilog file Adder32_Extended.v
+Analyzing Verilog file Adder32_Ext_tb.v
+Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
+Saving Verilog parse-tree work.FullAdder into c:/documents and
+settings/student/isetest/lab2/adder_ext/isim/work/@full@adder.sdb
+Saving Verilog parse-tree work.Shifter32 into c:/documents and
+settings/student/isetest/lab2/adder_ext/isim/work/@shifter32.sdb
+Saving Verilog parse-tree work.Adder32 into c:/documents and
+settings/student/isetest/lab2/adder_ext/isim/work/@adder32.sdb
+Saving Verilog parse-tree work.Adder32_Extended into c:/documents and
+settings/student/isetest/lab2/adder_ext/isim/work/@adder32_@extended.sdb
+Saving Verilog parse-tree work.Adder32_Ext_tb into c:/documents and
+settings/student/isetest/lab2/adder_ext/isim/work/@adder32_@ext_tb.sdb
+Saving Verilog parse-tree work.glbl into c:/documents and
+settings/student/isetest/lab2/adder_ext/isim/work/glbl.sdb
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 54152 Kb
+Fuse CPU Usage: 249 ms
+Compiling module glbl
+Compiling module FullAdder
+Compiling module Adder32
+Compiling module Shifter32
+Compiling module Adder32_Extended
+Compiling module Adder32_Ext_tb
+Compiled 6 Verilog Units
+Built simulation executable Adder32_Ext_tb_isim_beh.exe
+Fuse Memory Usage: 55436 Kb
+Fuse CPU Usage: 311 ms

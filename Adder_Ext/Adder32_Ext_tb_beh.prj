@@ -1,0 +1,6 @@
+verilog work "FullAdder.v"
+verilog work "Shifter32.v"
+verilog work "Adder32.v"
+verilog work "Adder32_Extended.v"
+verilog work "Adder32_Ext_tb.v"
+verilog work "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"

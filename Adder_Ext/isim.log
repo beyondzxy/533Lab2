@@ -1,0 +1,39 @@
+Command line:
+   ./Adder32_Ext_tb_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  1055
+
+Fri Jan 24 22:34:08 2025
+
+Total Line Count : 160
+
+ Elaboration Time: 0 sec
+
+ Current Memory Usage: 141.423 Meg
+
+ Total Signals          : 358
+ Total Nets             : 303
+ Total Signal Drivers   : 142
+ Total Blocks           : 70
+ Total Primitive Blocks : 66
+ Total Processes        : 146
+ Total Traceable Variables  : 22
+ Total Scalar Nets and Variables : 481
+ntrace select -o on -n /Adder32_Ext_tb/Result 
+ntrace select -o on -n /Adder32_Ext_tb/Cout 
+ntrace select -o on -n /Adder32_Ext_tb/A 
+ntrace select -o on -n /Adder32_Ext_tb/B 
+ntrace select -o on -n /Adder32_Ext_tb/Cin 
+ntrace select -o on -n /Adder32_Ext_tb/Mode 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 151.921 Meg
+
+Fri Jan 24 22:35:08 2025
+
